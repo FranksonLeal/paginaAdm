@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Auxílio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastrar Novo Auxílio</h1>
+        <form id="formCadastro">
+            <label for="titulo">Título da Publicação:</label>
+            <input type="text" id="titulo" required>
+
+            <label for="dataInicio">Data de Início:</label>
+            <input type="date" id="dataInicio" required>
+
+            <label for="dataFim">Data de Fim:</label>
+            <input type="date" id="dataFim" required>
+
+            <label for="imagem">Imagem (opcional):</label>
+            <input type="file" id="imagem">
+
+            <label for="url">URL:</label>
+            <input type="text" id="url" placeholder="URL do Auxílio" optional>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+        <button id="logout-button">Sair</button>
+        <div id="preview"></div>
+    </div>
+
+    <!-- Adicione Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-storage-compat.js"></script>
+    <script src="cadastro.js"></script>
+</body>
+</html>
